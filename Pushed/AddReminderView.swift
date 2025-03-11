@@ -9,7 +9,7 @@ import SwiftUI
 
 struct AddReminderView: View {
     @State
-    private var reminder = Reminder(title: "")
+    private var reminder = Reminder(title: "", description: "")
     
     @Environment(\.dismiss)
     private var dismiss
@@ -29,6 +29,9 @@ struct AddReminderView: View {
         NavigationStack {
             Form {
                 TextField("Title", text: $reminder.title)
+                TextField("Description", text: $reminder.description, axis: .vertical)
+                    .lineLimit(5...10)
+                
             }
             .navigationTitle("New Reminder")
             .navigationBarTitleDisplayMode(.inline)

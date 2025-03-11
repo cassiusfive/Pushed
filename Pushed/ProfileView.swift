@@ -13,7 +13,7 @@ struct ProfileView: View {
     
     var body: some View {
         VStack {
-            Text("ProfileView")
+            Text("Logged in as: " + appController.email)
             
             Button("Logout") {
                 do {
@@ -22,6 +22,7 @@ struct ProfileView: View {
                     print(error.localizedDescription)
                 }
             }
+            
         }
     }
 }

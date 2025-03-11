@@ -20,7 +20,7 @@ struct ContentView: View {
                 AuthView()
             case .authenticated:
                 TabView {
-                    ReminderView()
+                    ReminderListView()
                         .tabItem {
                             Image(systemName: "house.fill")
                             Text("Home")
