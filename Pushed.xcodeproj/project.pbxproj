@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6F461BC52D8279E100A700CD /* TaskService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F461BC42D8279E100A700CD /* TaskService.swift */; };
+		6F461BC72D827B0500A700CD /* StatsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F461BC62D827B0500A700CD /* StatsService.swift */; };
+		6F461BC92D827B9100A700CD /* AITaskService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F461BC82D827B9100A700CD /* AITaskService.swift */; };
 		6F86E64D2D5B0BDD00EE7D4A /* PushedApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F86E64C2D5B0BDD00EE7D4A /* PushedApp.swift */; };
 		6F86E64F2D5B0BDD00EE7D4A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F86E64E2D5B0BDD00EE7D4A /* ContentView.swift */; };
 		6F86E6532D5B0BDE00EE7D4A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6F86E6522D5B0BDE00EE7D4A /* Assets.xcassets */; };
@@ -20,9 +23,13 @@
 		6F86E66A2D5B1A7F00EE7D4A /* Reminder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F86E6692D5B1A7F00EE7D4A /* Reminder.swift */; };
 		6F86E66C2D5B1C1800EE7D4A /* ReminderListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F86E66B2D5B1C1800EE7D4A /* ReminderListView.swift */; };
 		6F86E66E2D5B232100EE7D4A /* AddReminderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F86E66D2D5B232100EE7D4A /* AddReminderView.swift */; };
+		6FC05D9C2D7FD1F200F98F4A /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 6FC05D9B2D7FD1F200F98F4A /* FirebaseMessaging */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6F461BC42D8279E100A700CD /* TaskService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskService.swift; sourceTree = "<group>"; };
+		6F461BC62D827B0500A700CD /* StatsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsService.swift; sourceTree = "<group>"; };
+		6F461BC82D827B9100A700CD /* AITaskService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AITaskService.swift; sourceTree = "<group>"; };
 		6F86E6492D5B0BDD00EE7D4A /* Pushed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pushed.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F86E64C2D5B0BDD00EE7D4A /* PushedApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushedApp.swift; sourceTree = "<group>"; };
 		6F86E64E2D5B0BDD00EE7D4A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -36,6 +43,7 @@
 		6F86E6692D5B1A7F00EE7D4A /* Reminder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reminder.swift; sourceTree = "<group>"; };
 		6F86E66B2D5B1C1800EE7D4A /* ReminderListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderListView.swift; sourceTree = "<group>"; };
 		6F86E66D2D5B232100EE7D4A /* AddReminderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddReminderView.swift; sourceTree = "<group>"; };
+		6FC05D9D2D7FD51600F98F4A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6FC05D9C2D7FD1F200F98F4A /* FirebaseMessaging in Frameworks */,
 				6F86E6602D5B108000EE7D4A /* FirebaseAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -50,6 +59,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6F461BC32D8279CB00A700CD /* Microservices */ = {
+			isa = PBXGroup;
+			children = (
+				6F461BC42D8279E100A700CD /* TaskService.swift */,
+				6F461BC62D827B0500A700CD /* StatsService.swift */,
+				6F461BC82D827B9100A700CD /* AITaskService.swift */,
+			);
+			path = Microservices;
+			sourceTree = "<group>";
+		};
 		6F86E6402D5B0BDD00EE7D4A = {
 			isa = PBXGroup;
 			children = (
@@ -69,10 +88,12 @@
 		6F86E64B2D5B0BDD00EE7D4A /* Pushed */ = {
 			isa = PBXGroup;
 			children = (
+				6FC05D9D2D7FD51600F98F4A /* Info.plist */,
 				6F86E65C2D5B0F7600EE7D4A /* GoogleService-Info.plist */,
 				6F86E64C2D5B0BDD00EE7D4A /* PushedApp.swift */,
 				6F86E64E2D5B0BDD00EE7D4A /* ContentView.swift */,
 				6F86E6522D5B0BDE00EE7D4A /* Assets.xcassets */,
+				6F461BC32D8279CB00A700CD /* Microservices */,
 				6F86E6542D5B0BDE00EE7D4A /* Preview Content */,
 				6F86E6612D5B10A400EE7D4A /* AppDelegate.swift */,
 				6F86E6632D5B113600EE7D4A /* AuthView.swift */,
@@ -111,6 +132,7 @@
 			name = Pushed;
 			packageProductDependencies = (
 				6F86E65F2D5B108000EE7D4A /* FirebaseAuth */,
+				6FC05D9B2D7FD1F200F98F4A /* FirebaseMessaging */,
 			);
 			productName = Pushed;
 			productReference = 6F86E6492D5B0BDD00EE7D4A /* Pushed.app */;
@@ -170,6 +192,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6F461BC92D827B9100A700CD /* AITaskService.swift in Sources */,
+				6F461BC52D8279E100A700CD /* TaskService.swift in Sources */,
+				6F461BC72D827B0500A700CD /* StatsService.swift in Sources */,
 				6F86E6622D5B10A400EE7D4A /* AppDelegate.swift in Sources */,
 				6F86E6662D5B119600EE7D4A /* AppController.swift in Sources */,
 				6F86E66E2D5B232100EE7D4A /* AddReminderView.swift in Sources */,
@@ -309,12 +334,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Pushed/Preview Content\"";
-				DEVELOPMENT_TEAM = 8FL6S24M6G;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Pushed/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Pushed;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -328,6 +355,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.cgvdev.Pushed;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -339,12 +367,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Pushed/Preview Content\"";
-				DEVELOPMENT_TEAM = 8FL6S24M6G;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Pushed/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Pushed;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -358,6 +388,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.cgvdev.Pushed;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -403,6 +434,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 6F86E65E2D5B108000EE7D4A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseAuth;
+		};
+		6FC05D9B2D7FD1F200F98F4A /* FirebaseMessaging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6F86E65E2D5B108000EE7D4A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseMessaging;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

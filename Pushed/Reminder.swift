@@ -7,12 +7,21 @@
 
 import Foundation
 
-struct Reminder: Identifiable {
-    let id = UUID()
+struct Reminder: Identifiable, Codable {
+    var id: Int?
+    var user_id: String?
     var title: String
     var description: String
     var dueDate: Date?
     var isCompleted = false
+    
+    enum CodingKeys: String, CodingKey {
+        case id
+        case user_id
+        case title
+        case description
+        case isCompleted = "completed"
+    }
 }
 
 extension Reminder {
